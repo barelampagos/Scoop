@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <!-- INCLUDES -->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="feed.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/favicon.ico">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
@@ -14,80 +16,82 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
     <title>Scoop</title>
-  </head>
+</head>
 
-  <body>
-  <!-- How dare you try to see my bad HTML!! -->
+<body>
+    <!-- How dare you try to see my bad HTML!! -->
 
-  <div class="navbar-fixed">
-  <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#techcrunch">TechCrunch</a></li>
-    <li><a href="#arstechnica">Ars Technica</a></li>
-    <li><a href="#engadget">Engadget</a></li>
-    <li><a href="#googlenews">Google News</a></li>
-    <li><a href="#hackernews">Hacker News</a></li>
-    <li><a href="#mashable">Mashable</a></li>
-    <li><a href="#recode">Recode</a></li>
-    <li><a href="#redditrall">Reddit /r/all</a></li>
-    <li><a href="#theverge">The Verge</a></li>
-  </ul>
-  <nav>
-    <div class="nav-wrapper light-blue accent-4">
-      <div class="container">
-        <a href="index.html" class="brand-logo">Scoop</a>
-        <ul id="nav-mobile" class="right">
-          <li><a href="index.html">Feed<i class="material-icons right">view_headline</i></a></li>
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Sources<i class="material-icons right">library_books</i></a></li>
+    <div class="navbar-fixed">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#techcrunch">TechCrunch</a></li>
+            <li><a href="#arstechnica">Ars Technica</a></li>
+            <li><a href="#engadget">Engadget</a></li>
+            <li><a href="#googlenews">Google News</a></li>
+            <li><a href="#hackernews">Hacker News</a></li>
+            <li><a href="#mashable">Mashable</a></li>
+            <li><a href="#recode">Recode</a></li>
+            <li><a href="#redditrall">Reddit /r/all</a></li>
+            <li><a href="#theverge">The Verge</a></li>
         </ul>
-      </div>
+        <nav>
+            <div class="nav-wrapper light-blue accent-4">
+                <div class="container">
+                    <a href="index.html" class="brand-logo">Scoop</a>
+                    <ul id="nav-mobile" class="right">
+                        <li><a href="index.html">Feed<i class="material-icons right">view_headline</i></a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Sources<i class="material-icons right">library_books</i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-  </nav>
-  </div>
 
-  <div class="container" id="loader">
-    <center>
-    <h4>Generating Feed</h4>
-      <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-blue-only">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div><div class="gap-patch">
-            <div class="circle"></div>
-          </div><div class="circle-clipper right">
-            <div class="circle"></div>
-          </div>
-        </div>
-      </div>
-    </center>
-  </div>
-
-  <div class="container" id="feed">
-  </div>
-
-  <footer class="page-footer light-blue accent-4">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Scoop</h5>
-          <p class="grey-text text-lighten-4">A simple, concise news feed. Powered by News API and designed by MaterializeCSS.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="https://newsapi.org/">News API</a></li>
-            <li><a class="grey-text text-lighten-3" href="http://materializecss.com/">MaterializeCSS</a></li>
-          </ul>
-        </div>
-      </div>
+    <div class="container" id="loader">
+        <center>
+            <h4>Generating Feed</h4>
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </center>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      2016 Bryan Relampagos
-      <a class="grey-text text-lighten-4 right" href="https://barelampagos.github.io">More by Bryan Relampagos</a>
-      </div>
+
+    <div class="container" id="feed">
     </div>
-  </footer>
-  </body>
+
+    <footer class="page-footer light-blue accent-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Scoop</h5>
+                    <p class="grey-text text-lighten-4">A simple, concise news feed. Powered by News API and designed by MaterializeCSS.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://newsapi.org/">News API</a></li>
+                        <li><a class="grey-text text-lighten-3" href="http://materializecss.com/">MaterializeCSS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                2016 Bryan Relampagos
+                <a class="grey-text text-lighten-4 right" href="https://barelampagos.github.io">More by Bryan Relampagos</a>
+            </div>
+        </div>
+    </footer>
+</body>
 
 
 </html>

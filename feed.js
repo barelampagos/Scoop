@@ -1,7 +1,7 @@
 function generateFeed() {
     var sources = ["techcrunch", "arstechnica", "engadget", "googlenews", "hackernews", "mashable", "recode", "redditrall", "theverge"]
 
-    sources.forEach(function (s) {
+    sources.forEach(function(s) {
         var url = "https://newsapi.org/v1/articles?source=" + s + "&apiKey=4f675d024b9145da9fa4aec1e090fff2"
 
         console.log("Building feed - " + s + "...")
@@ -12,7 +12,7 @@ function generateFeed() {
             $("#feed").append("<span class='anchor' id='" + s + "'></span><div class='" + s + "'></div>")
 
 
-            data.articles.forEach( function(a) {
+            data.articles.forEach(function(a) {
 
                 // Opening tags
                 var html = "<div class='section' ><div class='row'>"
@@ -27,9 +27,9 @@ function generateFeed() {
 
                 // Article information
                 if (a.author != null) {
-                    html += "<div class='col s8'><h4><b>" +  a.title + "</b> - <i>" + a.author + "</i></h4>"
+                    html += "<div class='col s8'><h4><b>" + a.title + "</b> - <i>" + a.author + "</i></h4>"
                 } else {
-                    html += "<div class='col s8'><h4><b>" +  a.title + "</b></h4>"
+                    html += "<div class='col s8'><h4><b>" + a.title + "</b></h4>"
                 }
                 if (a.description != null) html += "<h6>" + a.description;
 
@@ -52,9 +52,9 @@ function generateImages() {
 
     $.getJSON("https://newsapi.org/v1/sources", function(data) {
 
-        sources.forEach(function (s) {
-            var sauce = data.sources.filter(function (d) {
-                if(d.id == s) {
+        sources.forEach(function(s) {
+            var sauce = data.sources.filter(function(d) {
+                if (d.id == s) {
                     return d;
                 };
             })
@@ -67,7 +67,9 @@ function generateImages() {
     })
 }
 
-function removeLoader() { $("#loader").remove(); }
+function removeLoader() {
+    $("#loader").remove();
+}
 
 $(document).ready(function() {
     $(".dropdown-button").dropdown();
