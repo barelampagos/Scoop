@@ -1,10 +1,11 @@
+var sources = ["techcrunch", "ars-technica", "engadget", "google-news", "hacker-news", "mashable", "recode", "reddit-r-all", "the-verge", "wired-de", "techradar"]
+var api_key = config.API_KEY;
+
 function generateFeed() {
-    var sources = ["techcrunch", "arstechnica", "engadget", "googlenews", "hackernews", "mashable", "recode", "redditrall", "theverge"]
-
     sources.forEach(function(s) {
-        var url = "https://newsapi.org/v1/articles?source=" + s + "&apiKey=4f675d024b9145da9fa4aec1e090fff2"
+        var url = "https://newsapi.org/v1/articles?source=" + s + "&apiKey=" + api_key;
 
-        console.log("Building feed - " + s + "...")
+        console.log("Building feed [" + s + "]")
 
         $.getJSON(url, function(data) {
             // console.log(data);
@@ -48,21 +49,25 @@ function generateFeed() {
 }
 
 function generateImages() {
-    var sources = ["techcrunch", "arstechnica", "engadget", "googlenews", "hackernews", "mashable", "recode", "redditrall", "theverge"]
-
     $.getJSON("https://newsapi.org/v1/sources", function(data) {
 
         sources.forEach(function(s) {
-            var sauce = data.sources.filter(function(d) {
+            var currentSource = data.sources.filter(function(d) {
                 if (d.id == s) {
                     return d;
+
                 };
             })
 
-            console.log(sauce[0]);
+            // console.log(currentSource);
 
-            var html = "<br><center><img src='" + sauce[0].urlsToLogos.small + "'></center><br>"
-            $("." + s).prepend(html);
+            // Generate Dropdown Item
+            var dropdownItem = "<li><a href=#" + s + ">" + currentSource[0].name + "</a></li>"
+            $("#dropdown1").append(dropdownItem);
+
+            // Generate Source Image
+            var sourceImage = "<br><center><img src='" + currentSource[0].urlsToLogos.small + "'></center><br>"
+            $("." + s).prepend(sourceImage);
         })
     })
 }
