@@ -1,5 +1,5 @@
 var sources = ["techcrunch", "ars-technica", "engadget", "google-news", "hacker-news", "mashable", "recode", "reddit-r-all", "the-verge", "wired-de", "techradar"]
-var api_key = config.API_KEY;
+var api_key = "4f675d024b9145da9fa4aec1e090fff2";
 
 function generateFeed() {
     sources.forEach(function(s) {
@@ -8,10 +8,7 @@ function generateFeed() {
         console.log("Building feed [" + s + "]")
 
         $.getJSON(url, function(data) {
-            // console.log(data);
-            // $("#feed").append("<div id='" + s + "' class='" + s + "'></div>")
             $("#feed").append("<span class='anchor' id='" + s + "'></span><div class='" + s + "'></div>")
-
 
             data.articles.forEach(function(a) {
 
@@ -58,7 +55,6 @@ function generateImages() {
 
                 };
             })
-
             // console.log(currentSource);
 
             // Generate Dropdown Item
